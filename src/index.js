@@ -10,4 +10,6 @@ function component() {
   return element;
 }
 
+alert('heya')
+
 //document.body.appendChild(component());
