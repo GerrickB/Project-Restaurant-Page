@@ -1,15 +1,48 @@
 import _ from 'lodash';
+import './style.css';
+import Logo from './img-tea-cozy-logo.png';
 
 function component() {
-  const element = document.createElement('div');
+  const content = document.querySelector('#content');
+  const header = document.createElement('header');
+  
+  const myLogo = new Image();
+  myLogo.src = Logo;
 
-  // Before: Lodash, currently included via a script, is required for this line to work
-  // After:Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  const ul = document.createElement('ul');
+  ul.classList.add('menu');
+  let items = ['Mission', 'Featured Tea', 'Locations'];
+  items.forEach(itemText => {
+    let li = document.createElement('li');
+    li.textContent = itemText;
+    ul.appendChild(li);
+  });
 
-  return element;
+  const missionContainer = document.createElement('div');
+  missionContainer.classList.add('mission-container');
+
+  const mission = document.createElement('div');
+  mission.id = 'mission';
+
+  const h2 = document.createElement('h2');
+  h2.textContent = 'Our Mission';
+
+  const h4 = document.createElement('h4');
+  h4.textContent = 'Handpicked, Artisanally Curated, Free Range, Sustainable, Small Batch, Fair Trade, Organic Tea';
+
+  content.appendChild(header);
+  header.appendChild(myLogo);
+  header.appendChild(ul);
+
+  content.appendChild(missionContainer);
+  missionContainer.appendChild(mission);
+  mission.appendChild(h2);
+  mission.appendChild(h4);
+
+  return content;
 }
 
-alert('heya')
+document.body.appendChild(component());
 
-//document.body.appendChild(component());
+//alert('heya')
+
