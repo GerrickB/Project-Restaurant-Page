@@ -7,6 +7,11 @@ body {
   opacity: 0.9;
 }
 
+#content {
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -51,4 +56,50 @@ main {
   text-align: center;
   flex-basis: 100%;
   background-color: black;
+}
+
+.tea-container {
+  align-self: center;
+  width: 1000px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#tea-of-month {
+ text-align: center;
+}
+
+#tea-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+figure {
+  margin: 10px;
+}
+
+img {
+  height: 200px;
+  width: 300px;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.contacts-container {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contacts {
+  text-align: center;
+}
+
+.contacts-container h5 {
+  margin-left: 20px;
+  align-self: flex-start;
 }
