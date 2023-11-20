@@ -14,7 +14,7 @@ function component() {
 
   const ul = document.createElement('ul');
   ul.classList.add('menu');
-  let items = ['Home', 'Featured Tea', 'Contact'];
+  let items = ['Home', 'Menu', 'Contact'];
   let events = [loadHome, loadMenu, loadContact]
   items.forEach((itemText, index) => {
     let li = document.createElement('li');
